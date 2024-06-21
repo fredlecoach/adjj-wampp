@@ -1,0 +1,22 @@
+{% extends 'bootstrap.html.twig' %}
+
+{% block title %}création compte{% endblock %}
+
+{% block body %}
+    <h1>Créer compte Administrateur</h1>
+
+    {{ form_errors(registrationForm) }}
+
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+        {{ form_row(registrationForm.agreeTerms) }}
+        <div class="d-flex justify-content-end">
+          <button type="submit" class="btn btn-outline-success mt-2 px-5">Créer</button>
+        </div>
+
+      
+    {{ form_end(registrationForm) }}
+{% endblock %}

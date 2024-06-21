@@ -1,0 +1,39 @@
+{% extends "bootstrap.html.twig" %}
+
+{% block title %}Gestion inscriptions{% endblock %}
+
+{% block body %}
+
+  <h1 class="display-5 text-center mt-3 mb-3">Gestionnaire d'inscriptions</h1>
+
+  <table class="table text-center border ">
+    <thead class="text-capitalize ">
+      <td class="fw-bold border bg-light text-uppercase">#</td>
+      <td class="fw-bold border bg-light text-uppercase">nom</td>
+      <td class="fw-bold border bg-light text-uppercase">prénom</td>
+      <td class="fw-bold border bg-light text-uppercase">adresse</td>
+      <td class="fw-bold border bg-light text-uppercase">téléphone</td>      
+      <td class="fw-bold border bg-light text-uppercase">email</td>      
+      <td class="fw-bold border bg-light text-uppercase">choix de disciplines</td>
+      <td class="fw-bold border bg-light text-uppercase">rib</td>
+      <td class="fw-bold border bg-light text-uppercase">commentaires</td>
+    </thead>
+    <tbody> 
+      {% for key, value in inscription %}
+        <tr>
+          <th class="fw-bold bg-light text-capitalize"> {{value.id}}  </th>
+          <th class="fw-bold bg-light text-uppercase"> {{value.nom}} </th>
+          <td> {{value.prenom}} </td>
+          <td>{{value.adresse}}</td>
+          <td >{{value.telephone}}</td>
+          <td > {{value.email}} </td>
+          <td>{{value.disciplines}}</td>
+          <td><img src=" {{ '/uploads/' ~ value.rib }}" class="w-100"></td>
+          <td>{{value.commentaires}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+   
+  </table>
+
+{% endblock %}

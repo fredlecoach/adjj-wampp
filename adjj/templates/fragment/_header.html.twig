@@ -1,0 +1,49 @@
+<header class="bg-warning">
+    <nav class="navbar navbar-expand-lg container">
+        <div class="container-fluid">
+            <!-- Logos -->
+            <img src="{{ asset('images/Logo ADJJ 2.png') }}" alt="logo" style="width:9em">
+            <a class="navbar-brand px-3 fs-3" href="{{ path('home') }}">ADJJ | GRACIE BARRA</a>
+            <img src="{{ asset('images/GRACIE BARRA jaune.png') }}" style="width:7em" class="mx-2" alt="">
+
+            <!-- Bouton pour collapse de la navbar -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation -->
+            <div class="collapse navbar-collapse fs-4 justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+
+                    <!-- Si l'utilisateur est connecté -->
+                    {% if app.user %}
+                    <li class="nav-item px-2"><a class="nav-link" href="{{ path('admin') }}">Administrateur</a></li>
+                    <li class="nav-item px-2"><a class="nav-link" href="{{ path('app_register') }}">Créer compte</a></li>
+                    <li class="nav-item px-2"><a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a></li>
+
+                    <!-- Sinon -->
+                    {% else %}
+                    <li class="nav-item px-2"><a class="nav-link {% if app.request.attributes.get('_route') == 'home' %}active{% endif %}" href="{{ path('home') }}">Home</a></li>
+                    <li class="nav-item px-2"><a class="nav-link {% if app.request.attributes.get('_route') == 'inscription' %}active{% endif %}" href="{{ path('inscription') }}">Inscriptions</a></li>
+                    <li class="nav-item px-2"><a class="nav-link {% if app.request.attributes.get('_route') == 'cours' %}active{% endif %}" href="{{ path('cours') }}">Nos cours</a></li>
+                    <li class="nav-item px-2"><a class="nav-link {% if app.request.attributes.get('_route') == 'tarifs' %}active{% endif %}" href="{{ path('tarifs') }}">Tarifs</a></li>
+
+                    <!-- Dropdown menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle {% if app.request.attributes.get('_route') in ['professeurs', 'notre_histoire', 'actualites', 'stages_competitions'] %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ADJJ
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item {% if app.request.attributes.get('_route') == 'professeurs' %}active{% endif %}" href="{{ path('professeurs') }}">Nos entraîneurs</a></li>
+                            <li><a class="dropdown-item {% if app.request.attributes.get('_route') == 'notre_histoire' %}active{% endif %}" href="{{ path('notre_histoire') }}">Notre histoire</a></li>
+                            <li><a class="dropdown-item {% if app.request.attributes.get('_route') == 'actualites' %}active{% endif %}" href="{{ path('actualites') }}">Actualités</a></li>
+                            <li><a class="dropdown-item {% if app.request.attributes.get('_route') == 'stages_competitions' %}active{% endif %}" href="{{ path('stages_competitions') }}">Stages et compétitions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-2"><a class="nav-link" href="{{ path('app_login') }}">Connexion</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

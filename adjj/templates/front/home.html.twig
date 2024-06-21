@@ -1,0 +1,74 @@
+{% extends "bootstrap.html.twig" %}
+{% block title %}Accueil{% endblock %}
+{% block body %}
+
+  {# créer un message de succès d'envoi du message => ref -> InscriptionController #}
+   {% if app.session.flashbag.has('success') %}
+        <div class="alert alert-success">
+            {{ app.session.flashbag.get('success')[0] }}
+        </div>
+    {% endif %}
+
+  <section style="text-align: justify;">
+    <h3 class="text-center display-5">Bienvenue à l'ADJJ : Association de Développement du Ju-Jutsu</h3>
+      <p>
+        Situées dans l'Yonne (89), les 3 écoles de l'ADJJ vous offrent la possibilité de pratiquer différentes formes de ju-jutsu.
+      </p>
+        <h5 class="text-decoration-underline">Vous trouverez ici toutes les informations nécessaires :</h5>
+          <li>Cours dispensés</li>
+          <li>Horaires de nos trois écoles</li>
+          <li>Notre Actu</li>
+        <br>
+      <p class="bg-light text-dark">
+      N'hésitez pas à nous contacter ou à venir nous rencontrer, nous serons ravis de vous accueillir!
+      Pour plus d'infos, jetez un petit coup d'oeil en bas de page dans la catégorie <a href="#contact">Contact"</a>.
+      <div class="text-center"> <span class="bg-info text-white fw-bold badge fs-5">Venez faire un cours d'essai, c'est GRATUIT!</span>
+      </p>     
+  </section>
+ 
+  <section style="text-align: justify;">
+    <p>
+    Certains arts martiaux modernes se sont inspirés des techniques de Ju-Jutsu pour créer leur art, ou ne sont travaillés que pour quelques aspects techniques.
+    <br>
+    Par exemple, certains clubs se sont spécialisés dans la frappe, d'autres dans la projection, ou encore dans les clés.
+    <br>
+    Mais le Ju-Jutsu reste, de par ses origines, l’art complet du combat à main nues.
+    <br>
+    Dans un souci de perfection technique et afin de rester de vrais experts en Ju-Jutsu , l’A.D.J.J. et son encadrement technique a choisi d'en travailler quatre styles complémentaires. Ainsi, nous avons choisi de nous associer avec ce qui correspond le mieux à notre philosophie du Ju-Jutsu.
+    <br>
+    Aujourd’hui, l’A.D.J.J. est affiliée à plusieurs Fédérations indépendantes de la Fédération Française de Judo et pratiquant des styles différents.
+    <br>
+    La F.F.E.P.M.M. "Sports pour Tous", avec sa section "Luttes éducatives et Arts Traditionnels", est notre Fédération de tutelle.
+    <br>
+    Les sections "Ju-Jutsu" et "Self-Défense féminine" sont issues du Ju-Jutsu traditionnel, ancestral, qui constitue néanmoins un Ju-Jutsu moderne, adapté à la vie contemporaine, avec une pédagogie ouverte et adaptée aux différents publics.
+    </p>
+  </section>
+<!-- bouton formulaire -->
+  <div class="text-center"><a href="./images/BulletinInscrip2017 2018..pdf" target="_blank" download="formulaire d'inscription ADJJ"><button class="btn btn-outline-info fw-bold px-2 py-1 fs-5 rounded mb-3">Formulaire d'inscription</button></a>
+  </div>
+
+
+  <!-- galerie d'images -->
+  <div class="row mb-1">
+    <div class="col-7 g-1 slide-in-left">
+        <img src="./images/jjb combat.jpg" alt="" class="w-100 h-100 img-fluid">
+    </div>
+    <div class="col g-1 slide-in-right">
+        <img src="./images/Luta Livre Esportiva (1).jpeg" alt="" class="w-100 h-100 img-fluid">
+    </div>
+</div>
+<div class="row mb-1">
+    <div class="col g-1 slide-in-left">
+        <img src="./images/téléchargement (1).jpeg" alt="" class="w-100  img-fluid mb-1">
+        <img src="./images/Bjj women competing.jpeg" alt="" class="w-100  img-fluid">
+    </div>
+    <div class="col-7 g-1 slide-in-right">
+        <img src="./images/téléchargement (2).jpeg" alt="" class="w-100 h-100 img-fluid">
+    </div>
+</div>
+
+
+{% endblock %}
+  
+
+

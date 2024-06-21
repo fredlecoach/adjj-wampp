@@ -1,0 +1,9 @@
+# config/packages/mailer.yaml
+# framework:
+#   mailer:
+#     dsn: 'smtp://username:password@smtp.example.com:587'
+# config/packages/mailer.yaml
+framework:
+  mailer:
+    dsn: 'smtp://f.roblot.coulanges@gmail.com:Bebaki123.@smtp.gmail.com:587'
+
