@@ -106,7 +106,7 @@ class InscriptionType extends AbstractType
             ->add('rib', FileType::class, [
                 'attr' => ['class' => 'form-control mb-2'],
                 'data_class' => null,
-                'label' => 'Image',
+                'label' => 'R.I.B',
                 'required' => true,
                 'constraints' => [
                     new NotBlank(['message' => 'Veuillez sélectionner au moins une image.']),

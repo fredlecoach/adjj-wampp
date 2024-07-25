@@ -15,7 +15,7 @@
       <td class="fw-bold border bg-light text-uppercase">téléphone</td>      
       <td class="fw-bold border bg-light text-uppercase">email</td>      
       <td class="fw-bold border bg-light text-uppercase">choix de disciplines</td>
-      <td class="fw-bold border bg-light text-uppercase">rib</td>
+      {# <td class="fw-bold border bg-light text-uppercase">rib</td> #}
       <td class="fw-bold border bg-light text-uppercase">commentaires</td>
     </thead>
     <tbody> 
@@ -28,7 +28,7 @@
           <td >{{value.telephone}}</td>
           <td > {{value.email}} </td>
           <td>{{value.disciplines}}</td>
-          <td><img src=" {{ '/uploads/' ~ value.rib }}" class="w-100"></td>
+          {# <td><img src=" {{ '/uploads/' ~ value.rib }}" class="w-100"></td> #}
           <td>{{value.commentaires}}</td>
         </tr>
       {% endfor %}

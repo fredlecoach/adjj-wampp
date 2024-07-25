@@ -20,9 +20,10 @@
                     <li class="nav-item px-2"><a class="nav-link" href="{{ path('admin') }}">Administrateur</a></li>
                     <li class="nav-item px-2"><a class="nav-link" href="{{ path('app_register') }}">Créer compte</a></li>
                     <li class="nav-item px-2"><a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a></li>
+                    {% endif %}
 
                     <!-- Sinon -->
-                    {% else %}
+                    {% if not app.user %}
                     <li class="nav-item px-2"><a class="nav-link {% if app.request.attributes.get('_route') == 'home' %}active{% endif %}" href="{{ path('home') }}">Home</a></li>
                     <li class="nav-item px-2"><a class="nav-link {% if app.request.attributes.get('_route') == 'inscription' %}active{% endif %}" href="{{ path('inscription') }}">Inscriptions</a></li>
                     <li class="nav-item px-2"><a class="nav-link {% if app.request.attributes.get('_route') == 'cours' %}active{% endif %}" href="{{ path('cours') }}">Nos cours</a></li>
