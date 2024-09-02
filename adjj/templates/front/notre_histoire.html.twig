@@ -2,13 +2,16 @@
 {% block title %}Notre histoire{% endblock %}
 {% block body %}
 
+
+<div class="row row-cols-1 row-cols-lg-2 text-center mt-5">
+
     {# rond séparateur #}
-  <div class="d-flex justify-content-center">
-    <div class="circle"><h2 class="px-2 text-light">qui sommes-nous?</h2> </div>
+  <div class="d-flex justify-content-center align-items-center col">
+    <div class="circle"><h2  style="color: #fec106">a.d.j.j</h2> </div>
   </div>
   {# fin #}
 
-  <section style="text-align: justify;">
+  <section style="text-align: justify;" class="col bg-light">
   <p>
 
     L'A.D.J.J. (Association pour le Développement du Ju-Jutsu) est avant tout une équipe composée de responsables, de membres, de bénévoles qui ont tous à cœur de contribuer au développement du Ju-Jutsu sous toutes ses formes.
@@ -30,13 +33,12 @@
     </ul>
   </p>
   </section>
-  {# rond séparateur #}
-  <div class="d-flex justify-content-center">
-    <div class="circle"><h2 class="text-light">Nos styles</h2> </div>
   </div>
-{# fin #}
 
-  <section>
+{# 2ème ligne #}
+  <div class="row row-cols-1 row-cols-lg-2 text-center mt-5">
+
+  <section class="col bg-light d-flex align-items-center">
     <p style="text-align: justify;">
     Dans un souci de perfection technique et afin de rester de vrais experts en Ju-Jutsu , l’A.D.J.J. et son encadrement technique a choisi de travailler ces quatre styles complémentaires. Ainsi, nous avons choisi de nous associer avec ce qui correspond le mieux à notre philosophie du Ju-Jutsu.
 <br>
@@ -48,15 +50,25 @@
     </p>
   </section>
 
-    {# rond séparateur #}
-  <div class="d-flex justify-content-center">
-    <div class="circle"><h2 class="text-light">la commission technique</h2> </div>
+{# rond séparateur #}
+  <div class="d-flex justify-content-center align-items-center col">
+    <div class="circle"><h2  style="color: #fec106">Nos styles</h2> </div>
   </div>
-{# fin #}
+  {# fin #}
+
+</div>
 
 
-  <section>
-    <ul>
+<div class="row row-cols-1 row-cols-lg-2 text-center mt-5">
+    {# rond séparateur #}
+    <div class="d-flex justify-content-center col">
+      <div class="circle"><h2 style="color: #fec106">commission technique</h2> </div>
+    </div>
+    {# fin #}
+
+
+  <section class="col bg-light d-flex align-items-center">
+    <ul class="list-unstyled">
 Destinée à l'évaluation des compétences techniques des pratiquants de l'A.D.J.J., elle est composée de :
       <li class="text-capitalize">michel<span class="text-uppercase"> baillet</span></li>
       <li class="text-capitalize">marie<span class="text-uppercase"> baillet</span></li>
@@ -64,5 +76,6 @@ Destinée à l'évaluation des compétences techniques des pratiquants de l'A.D.
       <li class="text-capitalize">sophie<span class="text-uppercase"> lannier</span></li>
     </ul>
   </section>
+</div>
 
 {% endblock %}
